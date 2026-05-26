@@ -8,12 +8,12 @@ function getUserId() {
     return process.env.BFHL_USER_ID;
   }
 
-  const name = (process.env.BFHL_FULL_NAME || "ankit")
+  const name = (process.env.BFHL_FULL_NAME || "ankitbindal")
     .trim()
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "_")
     .replace(/^_+|_+$/g, "");
-  const dob = process.env.BFHL_DOB || "01012000";
+  const dob = process.env.BFHL_DOB || "18042005";
 
   return `${name}_${dob}`;
 }
@@ -69,8 +69,8 @@ router.post("/", (req, res) => {
   return res.status(200).json({
     is_success: true,
     user_id: getUserId(),
-    email: process.env.BFHL_EMAIL || "ankit@example.com",
-    roll_number: process.env.BFHL_ROLL_NUMBER || "ABCD123",
+    email: process.env.BFHL_EMAIL || "ankitbindal230528@acropolis.in",
+    roll_number: process.env.BFHL_ROLL_NUMBER || "0827CS231038",
     odd_numbers: oddNumbers,
     even_numbers: evenNumbers,
     alphabets,
