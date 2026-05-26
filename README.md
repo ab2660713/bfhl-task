@@ -45,6 +45,7 @@ For Vercel frontend deployment, create a separate Vercel project with `frontend`
 - `PATCH /tickets/:id`
 - `DELETE /tickets/:id`
 - `GET /tickets/stats`
+- `POST /bfhl`
 - `GET /health`
 
 Status transitions are enforced server-side: `open -> in_progress -> resolved -> closed`, with one-step backward moves allowed. SLA fields are computed on every read response.

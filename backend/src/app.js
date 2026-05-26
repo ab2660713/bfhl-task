@@ -1,5 +1,6 @@
 const cors = require("cors");
 const express = require("express");
+const bfhlRoutes = require("./routes/bfhl");
 const ticketRoutes = require("./routes/tickets");
 const { errorHandler, notFound } = require("./middleware/errorHandler");
 
@@ -33,6 +34,7 @@ app.get("/health", (req, res) => {
   res.json({ status: "ok" });
 });
 
+app.use("/bfhl", bfhlRoutes);
 app.use("/tickets", ticketRoutes);
 app.use(notFound);
 app.use(errorHandler);
