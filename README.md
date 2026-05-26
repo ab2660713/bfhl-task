@@ -18,6 +18,11 @@ npm run dev
 
 Set `MONGODB_URI` to a MongoDB Atlas connection string. Set `CLIENT_ORIGIN` to the deployed frontend URL in production.
 
+For Vercel backend deployment, create a Vercel project with `backend` as the root directory. Add:
+
+- `MONGO_URI`
+- `CLIENT_ORIGIN`
+
 ## Frontend
 
 ```bash
@@ -28,6 +33,10 @@ npm run dev
 ```
 
 Set `VITE_API_URL` to the backend URL. In production this must be the deployed backend URL, not `localhost`.
+
+For Vercel frontend deployment, create a separate Vercel project with `frontend` as the root directory. Add:
+
+- `VITE_API_URL`
 
 ## API
 
